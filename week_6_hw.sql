@@ -18,10 +18,14 @@ where return_date between '2005-05-28' and '2005/06/01'; /* this filters the dat
 /* 3.	How would you determine which movies are rented the most?
 sequel code for this problem: */
 
-select * 
-from film
-order by rental_rate desc; /* I'll use a code like this which orders movies' rental rate from the highest to the lowest, so the first
-movies in my list will be the one that are rented the most*/
+select count(*), f.title, f.film_id /*selecting all the columns we need */
+from film f
+join inventory i
+on f.film_id = i.film_id
+join rental r
+on i.inventory_id = r.inventory_id /* in the last 4 lines we're joining inventory and rental tables on film_id and inventory_id*/
+group by f.film_id /* grouping by film_id*/
+order by 1 desc; /* odering in descinding order to see which were rented the most at the top*/
 
 /* 4.Show how much each customer spent on movies (for all time) . Order them from least to most.
 sequel code for this problem: */
