@@ -1,5 +1,6 @@
 /*1.Create a new column called “status” in the rental table that uses a case statement to indicate if a film was returned late, early, or on time. */
 
+
 WITH RentalDetails AS (SELECT EXTRACT(DAY FROM rental.return_date - rental.rental_date) as ActualRental,
 film.rental_duration
 FROM rental
@@ -34,9 +35,10 @@ group by 2; /*grouping by the 2nd select element which is CityName*/
 
 /*  3.How many film categories are in each category? Why do you think there is a table for category and a table for film category?
 
----> Because there're more films than categories */
+---> Because there're more films than categories. It's just easier to keep them in 2 tables because one table has only 16 lines with categories and
+another one just refers each film into the proper category id */
 
-select c.name, count(distinct film_id) /*counting film_categories */
+select c.name, count(film_id) /*counting film_categories */
 from category c
 left join film_category fc
 on c.category_id = fc.category_id /*in this line and the above lines joining category and film_category tables */
