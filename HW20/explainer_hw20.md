@@ -23,5 +23,22 @@ There're 2 ways that you can run the program from question1:
 w<img width="1267" alt="Screen Shot 2021-07-20 at 10 36 07 AM" src="https://user-images.githubusercontent.com/79989694/126354144-83687228-4ff1-427a-ab34-e9af9239d29f.png">
 
 
+### 1. Option 2: run it from a regular terminal
+
+1. Go to your computer search and open terminal
+
+<img width="845" alt="Screen Shot 2021-07-20 at 10 45 40 AM" src="https://user-images.githubusercontent.com/79989694/126354907-4bdfec01-79f4-4746-9081-ea397113481a.png">
+
+2. Repeat step 3&4 from the  Option 1:
+* cd to the directory the file you want to run is. In my case it was HW20
+* type this command to execute the file: **python3  word_and_punct_count.py** and the file will produce the output in the terminal
+
+I found that it's very convenient to run your py file from the terminal within Visual Studio Code. That way you don't have to switch in between windows when trying to run it.
+
+## Why this kind of exercise might be helpful for NLP 
+
+I think this kind of exercise might be valuable in NLP as it helps to clean the text and better prepare it for the analysis. For example, stripping all punctuation from text is very important to perform an analysis on words and make sure it doesn't count punctuation as words too. Counting words, for example, can be very helpful to better understand the text and build hypothesis around how you'd like to further analyze the text.
+
+
 
 
